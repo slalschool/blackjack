@@ -32,15 +32,15 @@ public class BlackJack {
         System.out.println("#  ######  ####### #       #  #####  #    #   ####   #       #  ####  #   #  #");
         System.out.println("#                                                                            #");
         System.out.println("#  A human v. CPU rendition of the classic card game                         #");
-        System.out.println("#  Blackjack. Play the game, read and modify the code,                                                               #");
-        System.out.println("#  and make it your own!                                                                            #");
+        System.out.println("#  Blackjack. Play the game, read and modify the code,                       #");
+        System.out.println("#  and make it your own!                                                     #");
         System.out.println("##############################################################################");
         new BlackJack().play();
     }
 
     public void play() {
         turn = true;
-        wager();0
+        wager();
         clearHand("player");
         clearHand("computer");
         shuffleAndDeal();
@@ -89,7 +89,7 @@ public class BlackJack {
         if (!cpu) {
             showHand("initial");
             String decision = "x";
-            while (action.equals("H") == false && action.equals("S") == false) {
+            while (decision.equals("H") == false && decision.equals("S") == false) {
                 System.out.println("Hit or Stand? (H or S)");
                 decision = in.nextLine().trim().toUpperCase();
             }
